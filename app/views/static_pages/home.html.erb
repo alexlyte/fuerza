@@ -1,6 +1,11 @@
-<h1>Hermanos Unidos de UCSB </h1>
-<p>
-  This is the home page for the
-  <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-  sample application.
-</p>
+<div class="center hero-unit">
+  <h1>Welcome to the website of Hermanos Unidos de UCSB</h1>
+
+  <h2>
+    This is the home page for the UCSB student organization. Alternate website also located at <a href="http://huucsb.org">HU UCSB Official Website</a>
+  </h2>
+
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+</div>
+
+<%= link_to image_tag("NewHeader2.jpg", alt: "NewHeader"), 'http://huucsb.org' %>
