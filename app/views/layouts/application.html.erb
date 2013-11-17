@@ -11,13 +11,13 @@
     <![endif]-->
   </head>
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
+<!--     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
           <%= link_to "Hermanos Unidos", '#', id: "logo" %>
           <nav>
             <ul class="nav pull-right">
-              <li><%= link_to "Home",    root_path %></li>
+              # <li><%= link_to "Home",    root_path %></li>
               <li><%= link_to "Help",    help_path %></li>
               <li><%= link_to "Sign in", signup_path %></li>
             </ul>
@@ -28,5 +28,26 @@
     <div class="container">
       <%= yield %>
     </div>
+ -->
+<!-- 
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
+
+ -->
+<body>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
+
   </body>
 </html>
