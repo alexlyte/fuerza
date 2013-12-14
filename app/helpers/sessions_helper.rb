@@ -10,6 +10,11 @@ module SessionsHelper
     !current_user.nil?
   end
 
+  def current_event
+    @current_event = Event.find_by(@event.id)
+  end
+
+
   def current_user=(user)
     @current_user = user
   end

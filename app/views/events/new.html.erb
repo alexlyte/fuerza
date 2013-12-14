@@ -3,7 +3,7 @@
 
  <div class="row">
   <div class="span6 offset3">
-    <%= form_for(@event) do |f| %>
+    <%= form_for(@event, :html => { :multipart => true }) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 
       <%= f.label :name %>
@@ -22,6 +22,8 @@
 
       <%= f.label :codeword %>
       <%= f.text_field :codeword %>
+
+      <%= f.file_field :avatar %>
 
       <%= f.submit "Create Event", class: "btn btn-large btn-primary" %>
     <% end %>

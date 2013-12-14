@@ -1,3 +1,10 @@
 <li>
   <%= link_to event.name, event %>
+  <% if current_user.admin? && !current_user?(user) %>
+    | <%= link_to "delete", event, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+    | <%= link_to "edit", event, method: :edit %>
+
+  <% end %>
+
 </li>

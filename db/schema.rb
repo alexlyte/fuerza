@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131210001703) do
+ActiveRecord::Schema.define(version: 20131214172520) do
 
   create_table "events", force: true do |t|
     t.string   "name"
@@ -23,6 +23,10 @@ ActiveRecord::Schema.define(version: 20131210001703) do
     t.text     "events"
     t.text     "description"
     t.string   "codeword"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "events", ["datetime"], name: "index_events_on_datetime", unique: true
@@ -55,8 +59,12 @@ ActiveRecord::Schema.define(version: 20131210001703) do
     t.datetime "updated_at"
     t.string   "password_digest"
     t.string   "remember_token"
-    t.boolean  "admin",           default: false
+    t.boolean  "admin",               default: false
     t.string   "secret"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

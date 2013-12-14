@@ -3,23 +3,27 @@
 
 <div class="row">
   <div class="span6 offset3">
-    <%= form_for(@event) do |f| %>
+    <%= form_for(@event, :html => { :multipart => true }) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
- 
+
       <%= f.label :name %>
       <%= f.text_field :name %>
 
-      <%= f.label :datetime %>
-      <%= f.text_field :datetime %>
+	  <%= f.datetime_select :datetime %>
 
       <%= f.label :location %>
       <%= f.text_field :location %>
 
+      <%= f.label :contact %>
+      <%= f.text_field :contact %>
+
       <%= f.label :description %>
       <%= f.text_field :description %>
 
-	  <%= f.label :codeword %>
+      <%= f.label :codeword %>
       <%= f.text_field :codeword %>
+
+      <%= f.file_field :avatar %>
 
       <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
     <% end %>
