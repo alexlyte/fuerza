@@ -30,17 +30,30 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
+
+
+
   
   def create
     @user = User.new(user_params)
-    if @user.save
-      sign_in @user
-      flash[:success] = "Welcome to Hermanos Unidos!"
-      redirect_to @user
+
+   
+    if (@user.secret=="MonoKai")  
+      if @user.save
+        sign_in @user
+        flash[:success] = "Welcome to Hermanos Unidos!"
+        redirect_to @user
+      else
+        render 'new'
+      end
     else
+      flash[:success] = "Contact your local Hermano for the membership token"
       render 'new'
     end
   end
+
+
+
 
   def destroy
     User.find(params[:id]).destroy
@@ -68,7 +81,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:name, :email, :password,
+      params.require(:user).permit(:name, :email, :password, :secret,
                                    :password_confirmation)
     end
     

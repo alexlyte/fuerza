@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131130171846) do
+ActiveRecord::Schema.define(version: 20131210001703) do
+
+  create_table "events", force: true do |t|
+    t.string   "name"
+    t.datetime "datetime"
+    t.string   "location"
+    t.string   "contact"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "events"
+    t.text     "description"
+    t.string   "codeword"
+  end
+
+  add_index "events", ["datetime"], name: "index_events_on_datetime", unique: true
+  add_index "events", ["name"], name: "index_events_on_name", unique: true
 
   create_table "microposts", force: true do |t|
     t.string   "content"
@@ -41,6 +56,7 @@ ActiveRecord::Schema.define(version: 20131130171846) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",           default: false
+    t.string   "secret"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
