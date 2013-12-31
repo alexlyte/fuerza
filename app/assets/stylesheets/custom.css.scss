@@ -5,6 +5,7 @@
 $grayMediumLight: #eaeaea;
 
 
+
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -12,29 +13,43 @@ $grayMediumLight: #eaeaea;
 }
 
 
-
 /* universal */
 
 html {
   overflow-y: scroll;
+
+/*  height:100%;
+*/
 }
 
 body {
   padding-top: 60px;
+/*  height:100%; margin:0; padding:0;
+*/
+background-image:url('Background2011.jpg');
+background-size: cover;
+background-repeat:no-repeat;
+background-attachment:fixed;
 }
+
 
 section {
   overflow: auto;
+
 }
 
 textarea {
   resize: vertical;
+    color: #fff;
+
 }
 
 .center {
   text-align: center;
+  background-color: #f0e7e0;
   h1 {
     margin-bottom: 10px;
+    color: black;
   }
 }
 
@@ -42,6 +57,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+
 }
 
 h1 {
@@ -49,6 +65,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color: white;
 }
 
 h2 {
@@ -57,12 +74,15 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $grayLight;
+  color: black;
+  
+
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  color: white;
 }
 
 
@@ -78,6 +98,7 @@ p {
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
+
   &:hover {
     color: white;
     text-decoration: none;
@@ -89,21 +110,24 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
+  border-top: 1px solid #fff;
+  color: #fff;
   a {
-    color: $gray;
+    color: #fff;
     &:hover {
-      color: $grayDarker;
+      color: #fff;
     }
   }
   small {
     float: left;
+    color: #fff;
   }
   ul {
     float: right;
     list-style: none;
+    color: #fff;
     li {
+      color: #fff;
       float: left;
       margin-left: 10px;
     }
@@ -120,12 +144,23 @@ footer {
   @include box_sizing;
 }
 
+
+/*.bannerPage {
+  background:url(NewHeader2.jpg);
+  background-size:80px 60px;
+  background-repeat:no-repeat;
+  
+  @include box_sizing;
+
+}
+
+*/
 /* sidebar */
 
 aside {
   section {
     padding: 10px 0;
-    border-top: 1px solid $grayLighter;
+    border-top: 1px solid white;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -155,15 +190,15 @@ aside {
   a {
     float: left;
     padding: 0 10px;
-    border-left: 1px solid $grayLighter;
-    color: gray;
+    border-left: 1px solid white;
+    color: white;
     &:first-child {
       padding-left: 0;
       border: 0;
     }
     &:hover {
       text-decoration: none;
-      color: $blue;
+      color: #fff;
     }
   }
   strong {
@@ -178,6 +213,7 @@ aside {
     margin: 1px 1px;
   }
 }
+
 
 
 

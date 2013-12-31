@@ -19,6 +19,12 @@
 
   </div>
 <% else %>
+
+<div class="bannerPage" >
+    <%=link_to image_tag("NewHeader2.jpg", :size => "30000x10000"),"http://hermanosunidos.info/" %>
+</div>
+
+
   <div class="center hero-unit">
     <h1>Welcome to the Sample App</h1>
 
@@ -28,9 +34,10 @@
       for the current version. 
     </h2>
 
+
     <%= link_to "Sign up now!", signup_path,
                                 class: "btn btn-large btn-primary" %>
   </div>
 
-  <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+
 <% end %>
