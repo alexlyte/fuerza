@@ -11,7 +11,6 @@ gem 'bootstrap-will_paginate', '0.0.9'
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
 gem "paperclip", "~> 3.0"
-gem 'simple-navigation'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
