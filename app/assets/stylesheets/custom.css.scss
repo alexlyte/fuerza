@@ -26,8 +26,8 @@ body {
   padding-top: 60px;
 /*  height:100%; margin:0; padding:0;
 */
-background-image:url('Background2011.jpg');
-background-size: cover;
+/*background-image:url('Background2011.jpg');
+*/background-size: cover;
 background-repeat:no-repeat;
 background-attachment:fixed;
 background-color: #604d3f;
@@ -36,6 +36,7 @@ background-color: #604d3f;
 
 section {
   overflow: auto;
+  background-color: #604d3f;
 
 }
 
