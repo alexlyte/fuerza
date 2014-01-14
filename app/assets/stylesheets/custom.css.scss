@@ -31,6 +31,20 @@ body {
 background-repeat:no-repeat;
 background-attachment:fixed;
 background-color: #604d3f;
+color: #d0cdc9;
+  a:link {
+  color: #d0cdc9;
+  }
+  a:hover {
+  color: #d0cdc9;
+  }
+  a:active {
+  color: #d0cdc9;
+  }
+  a:visited {
+  color: #d0cdc9;
+  }
+   
 }
 
 
@@ -42,16 +56,26 @@ section {
 
 textarea {
   resize: vertical;
-    color: #fff;
+    color: #aea4a4;
 
 }
+
+
+.joke-unit{
+  text-align: center;
+  height: 10%;
+  color: black;
+}
+
+
 
 .center {
   text-align: center;
   background-color: #f0e7e0;
   h1 {
     margin-bottom: 10px;
-    color: black;
+/*    controls color of hero unit h1  */    
+    color: black; 
   }
 }
 
@@ -59,6 +83,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  color:  #aea4a4;
 
 }
 
@@ -67,7 +92,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
-  color: white;
+  color: #aea4a4;
 }
 
 h2 {
@@ -76,15 +101,18 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
+/*  controls paragraph text color in hero unit */  
   color: black;
-  
-
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.7em;
-  color: white;
+  color: #aea4a4;
+}
+
+a{
+  color: #d0cdc9;
 }
 
 
@@ -112,18 +140,32 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #fff;
-  color: #fff;
-  a {
-    color: #fff;
-    &:hover {
-      color: #fff;
-    }
+  border-top: 1px solid #d0cdc9;
+  color: #d0cdc9;
+  a:link {
+    color: #d0cdc9;
+   }
+  a:hover{
+    color: #d0cdc9;
+   }
+  a:active{
+    color: #d0cdc9;
+   }
+  a:visited {
+    color: #d0cdc9;
   }
   small {
     float: left;
-    color: #fff;
+/*    controls the small left footer text color */
+    color: #d0cdc9;
+    a {
+      color: #d0cdc9;
+      &:hover {
+       color: #d0cdc9;
+      }
+    }
   }
+
   ul {
     float: right;
     list-style: none;
@@ -220,12 +262,44 @@ aside {
 
 
 /* forms */
+.btn-primary,
+.btn-primary:hover,
+.btn-warning,
+.btn-warning:hover,
+.btn-danger,
+.btn-danger:hover,
+.btn-success,
+.btn-success:hover,
+.btn-info,
+.btn-info:hover,
+.btn-inverse,
+.btn-inverse:hover {
+  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  color: white;
+}
+ // Provide *some* extra contrast for those who can get it
+.btn-primary.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-success.active,
+.btn-info.active,
+.btn-dark.active {
+  color: rgba(255,255,255,.75);
+}
+
+/* controls the form field label text color
+deduced this from inspecting the element */
+
+label {
+  color: #aea4a4;
+}
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
+  color: #d0cdc9;
 }
 
 input {
