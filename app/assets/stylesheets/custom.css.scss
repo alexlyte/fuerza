@@ -24,13 +24,13 @@ html {
 
 body {
   padding-top: 60px;
-/*  height:100%; margin:0; padding:0;
-*/
-/*background-image:url('Background2011.jpg');
-*/background-size: cover;
+/*  height:100%; margin:0; padding:0;*/
+background-size: cover;
 background-repeat:no-repeat;
 background-attachment:fixed;
-background-color: #604d3f;
+background-color: #27231f;
+font-family: OptimusPrinceps;
+font-size: 12pt;
 color: #d0cdc9;
   a:link {
   color: #d0cdc9;
@@ -44,19 +44,25 @@ color: #d0cdc9;
   a:visited {
   color: #d0cdc9;
   }
-   
+  .dropdown-menu{
+    color: #333333;
+  }
 }
 
 
 section {
   overflow: auto;
-  background-color: #604d3f;
+  background-color: #f4e8dc;
+  padding-left: 10px;
+    h1, h2, h3, h4, a{
+    color: #333333;
+  }
 
 }
 
 textarea {
   resize: vertical;
-    color: #aea4a4;
+    color: #746a5f;
 
 }
 
@@ -117,6 +123,11 @@ a{
 
 
 /* header */
+
+.nav, .pull-right, .dropdown-menu{
+  color: #333333;
+}
+
 
 #logo {
   float: left;
