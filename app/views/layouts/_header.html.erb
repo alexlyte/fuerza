@@ -6,6 +6,7 @@
         <ul class="nav pull-right">
           <% if signed_in? %>
           <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Scholarships", scholarships_path %></li>
           <li><%= link_to "Events", events_path %></li>
           <li><%= link_to "Users", users_path %></li>
           <li id="fat-menu" class="dropdown">
@@ -22,11 +23,12 @@
             </li>
           <% else %>
             <li><%= link_to "Home", root_path %></li>
-            <li><%= link_to "Members", root_path %></li>
-            <li><%= link_to "History", root_path %></li>
-            <li><%= link_to "Academics", root_path %></li>
-            <li><%= link_to "Community Service",root_path %></li>
-            <li><%= link_to "Social", root_path %></li>
+           <li><%= link_to "History", "http://huucsb.org/history2011.php" %></li>
+           <li><%= link_to "Members", "http://huucsb.org/generalbody2011.php" %></li>
+           
+            <li><%= link_to "Academics", academics_path %></li>
+            <li><%= link_to "Community Service", "http://huucsb.org/Community2011.php" %></li>
+            <li><%= link_to "Social", "http://huucsb.org/Social2011.php" %></li>
             <li><%= link_to "Sign in", signin_path %></li>
           <% end %>   
         </ul>

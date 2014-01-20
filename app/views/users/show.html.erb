@@ -20,5 +20,15 @@
       </ol>
       <%= will_paginate @microposts %>
     <% end %>
+    <div class="center">
+      <h3>About Me</h3>
+      <h2><%= @user.about %></h2>
+      <h3>Interests</h3>
+      <h2><%= @user.interests %></h2>
+      <h3>Classes</h3>
+      <h2><%= @user.classes %></h2>
+      <h3>Expected Graduation Year</h3>
+      <h2><%= @user.year %></h2>
+    </div>
   </div>
 </div>

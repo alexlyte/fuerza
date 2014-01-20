@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140104195631) do
+ActiveRecord::Schema.define(version: 20140120170441) do
+
+  create_table "attendances", force: true do |t|
+    t.integer  "attendee_id"
+    t.integer  "attended_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "attendances", ["attended_id"], name: "index_attendances_on_attended_id"
+  add_index "attendances", ["attendee_id", "attended_id"], name: "index_attendances_on_attendee_id_and_attended_id", unique: true
+  add_index "attendances", ["attendee_id"], name: "index_attendances_on_attendee_id"
 
   create_table "events", force: true do |t|
     t.string   "name"
@@ -53,6 +64,15 @@ ActiveRecord::Schema.define(version: 20140104195631) do
   add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
 
+  create_table "updates", force: true do |t|
+    t.string   "content"
+    t.integer  "event_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "updates", ["event_id", "created_at"], name: "index_updates_on_event_id_and_created_at"
+
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
@@ -66,6 +86,10 @@ ActiveRecord::Schema.define(version: 20140104195631) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.text     "classes"
+    t.text     "interests"
+    t.text     "about"
+    t.string   "year"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

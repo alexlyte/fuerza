@@ -2,13 +2,15 @@
 <div class="row">
   <aside class="span4">
     <section>
-      <h1>
         <%= image_tag(@event.avatar.url(:medium)) %>
-        <%= @event.name %>
-      </h1>
+     </section>
+   </aside>
+
+     <div class="center">
+      <h1><%= @event.name %></h1>
+      <h3><%=@event.type %></h3>
       <h2> <%=@event.datetime.localtime %> </h2>
       <h3><%=@event.location %></h3>
       <p><%= @event.description %></p>
-     </section>
-   </aside>
+    </div>
 </div>

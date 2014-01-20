@@ -17,6 +17,8 @@ Fuerza::Application.routes.draw do
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/events',  to: 'events#index',         via: 'get'
+  match '/academics', to: 'static_pages#academics', via: 'get'
+  match '/scholarships', to: 'static_pages#scholarships', via: 'get'
   
   # match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   # match 'auth/failure', to: redirect('/'), via: [:get, :post]
